@@ -1,0 +1,192 @@
+body { 
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding:0;
+    margin:0;
+    background-color: #f2f2f2
+}
+/* Global */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden
+}
+ul {
+    margin: 0;
+    padding: 0
+}
+
+/* Header */
+header {
+    background-color: #35424a;
+    color: #fff;
+    padding-top: 20px;
+    min-height: 60px;
+    border-bottom: #e8491d 3px solid;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+header a {
+     color: #fff;
+     text-decoration: none;
+     font-size: 16px;
+     text-transform: uppercase
+}
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px
+}
+header #brand {
+    float: left;
+}
+header #brand h1{
+    margin: 0;
+}
+header nav {
+    float: right;
+    margin-top: 10px
+}
+header .highlight, header .active a{
+color: #e8491d;
+font-weight: bold;
+}
+header a:hover{
+    color: #c7c2c1;
+    font-weight: bold;
+}
+/* Showcase */
+
+#showcase {
+    margin-top: 40px;
+    min-height: 400px;
+    background: url("../images/diary1.png") no-repeat 0 -50px;
+    text-align: center;
+    color: #35424a   
+}
+#showcase h1 {
+    margin-top: 100px;
+    font-size: 45px;
+    margin-bottom: 10px
+}
+#showcase p {
+    font-size: 18px;
+}
+/* Form */
+#form {
+    padding:15px;
+    padding-bottom: 25px; 
+    color: #fff;
+    background: #35424a;
+    
+}
+h2#query {
+    text-align: center
+}
+#query button {
+    background: #e8491d;
+    color: #fff;
+    height: 25px;
+    font-weight: bold
+}
+.fields {
+    float: left;
+    width: 60%;
+    margin-bottom: 30px
+}
+.fields button{
+    background: teal;
+    font-weight: bold;
+    color: #fff
+    
+}
+.reg {
+    line-height: 2.2em;
+    margin: auto; 
+    width: 60%;
+}
+.reg input {
+    width: 60%; 
+    float: right;
+    margin: 0 30px;
+    line-height: 1.5em;
+}
+.query {
+    float: right;
+    width: 40%;
+    padding-top: 30px
+}
+input {
+    padding:0 5px;
+    border-radius: 5px
+}
+ button {
+     margin-right: 20px;
+     border-radius: 5px;
+     border: none
+ }
+.buttons #reg {
+    background: teal;
+    font-weight: bold;
+    color: #fff
+ }
+ .buttons #login {
+    background: #e8491d;
+    font-weight: bold;
+    color: #fff
+ }
+ div.buttons {
+    text-align: center
+}
+.hide {
+    display: none
+}
+/* Boxes */
+#boxes {
+    margin-top: 20px
+}
+#boxes .box {
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+
+#boxes .box img {
+    width: 90px;
+    height: auto;
+}
+footer {
+    background-color: #35424a;
+    color: #fff;
+    padding: 10px auto;
+    min-height: 50px;
+    border-top: #e8491d 3px solid;
+    text-align: center
+}
+
+/* Media Queries */
+@media(max-width: 568px) {
+    header #brand, header nav,header nav li, #form .query, #form .fields, #form .reg, #boxes .box{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    header {
+        padding-bottom: 20px;
+    }
+    #showcase h1 {
+        margin-top: 80px
+    }
+    #form .fields button {
+        display: block;
+        width: 80%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    #form .fields input, #form .reg input {
+        width: 80%;
+        margin-bottom: 5px
+    }
+}
