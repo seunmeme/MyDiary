@@ -2,7 +2,8 @@ body {
     font: 15px/1.5 Arial, Helvetica, sans-serif;
     padding:0;
     margin:0;
-    background-color: #f2f2f2
+    background-color: #f2f2f2;
+    color: #35424a
 }
 /* Global */
 .container {
@@ -22,10 +23,6 @@ header {
     padding-top: 20px;
     min-height: 60px;
     border-bottom: #e8491d 3px solid;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
 }
 header a {
      color: #fff;
@@ -56,10 +53,9 @@ header a:hover{
     color: #c7c2c1;
     font-weight: bold;
 }
-/* Showcase */
 
+/* Showcase */
 #showcase {
-    margin-top: 40px;
     min-height: 400px;
     background: url("../images/diary1.png") no-repeat 0 -50px;
     text-align: center;
@@ -73,7 +69,8 @@ header a:hover{
 #showcase p {
     font-size: 18px;
 }
-/* Form */
+
+/* Forms */
 #form {
     padding:15px;
     padding-bottom: 25px; 
@@ -124,6 +121,7 @@ input {
  button {
      margin-right: 20px;
      border-radius: 5px;
+     font-weight: bold;
      border: none
  }
 .buttons #reg {
@@ -142,6 +140,21 @@ input {
 .hide {
     display: none
 }
+.entry h3{
+    color: #fff;
+    background: #35424a;
+    padding: 5px 10px;
+    border-radius: 0 5px;
+    margin-bottom: 10px
+}
+.entry p {
+    color: #35424a;
+    padding: 5px 10px;
+    margin-top: 0px
+}
+.entry p span {
+    float: right;
+}
 /* Boxes */
 #boxes {
     margin-top: 20px
@@ -157,18 +170,72 @@ input {
     width: 90px;
     height: auto;
 }
+#main {
+    float: left;
+    width: 60%;
+    margin-bottom: 30px
+}
+
+/* Sidebar */
+#sidebar {
+    float: right;
+    width: 33%;
+    margin-top: 75px;
+    color: #fff;
+    background: #35424a;
+    border-radius: 15px;
+    padding: 20px 0;
+}
+form {
+    padding: 0 15px;
+    margin: 0;
+}
+#sidebar input[type="text"] {
+   margin:  10px 25px;
+   width: 68%;
+}
+input[type="textarea"] {
+    height: 50px;
+    width: 68%;
+}
+#sidebar button {
+    color:  white;
+    background: teal;
+    border: none;
+    margin-top: 20px;
+    margin-left: 70px;
+ }
+
+ /* Modal */
+ #cover-div {
+    position: fixed;
+    top: 100px;
+    left: 50px;
+    z-index: 9000;
+    margin: auto;
+    margin-top: 40px;
+    padding-top: 15px;
+    width: 60%;
+    height: 60%;
+    text-align: center;
+    color: #fff;
+    background-color: gray;
+    opacity: 0.8;
+    border-radius: 15px;
+  }
+/* Footer */
 footer {
     background-color: #35424a;
     color: #fff;
     padding: 10px auto;
     min-height: 50px;
     border-top: #e8491d 3px solid;
-    text-align: center
+    text-align: center;
 }
 
 /* Media Queries */
-@media(max-width: 568px) {
-    header #brand, header nav,header nav li, #form .query, #form .fields, #form .reg, #boxes .box{
+@media(max-width: 768px) {
+    header #brand, #sidebar, #main, header nav,header nav li, #form .query, #form .fields, #form .reg, #boxes .box{
         float: none;
         text-align: center;
         width: 100%;
@@ -179,11 +246,18 @@ footer {
     #showcase h1 {
         margin-top: 80px
     }
-    #form .fields button {
+    #form .fields button, #sidebar, #sidebar button, #reg, #login, .buttons span {
         display: block;
         width: 80%;
         margin: auto;
         margin-top: 10px;
+        margin-bottom: 15px
+    }
+    #cover-div {
+        width: 80%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 15px 
     }
     #form .fields input, #form .reg input {
         width: 80%;
