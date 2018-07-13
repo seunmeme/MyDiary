@@ -57,7 +57,7 @@ header a:hover{
 /* Showcase */
 #showcase {
     min-height: 400px;
-    background: url("../images/diary1.png") no-repeat 0 -50px;
+    background: url("../images/diary1.jpg") no-repeat 0 -50px;
     text-align: center;
     color: #35424a   
 }
@@ -205,6 +205,15 @@ input[type="textarea"] {
     margin-top: 20px;
     margin-left: 70px;
  }
+ #main h1 {
+    margin-top: 40px;
+ }
+ input[type="submit"] {
+    border: none;
+}
+input[type="date"] {
+    width: 50%
+}
 
  /* Modal */
  #cover-div {

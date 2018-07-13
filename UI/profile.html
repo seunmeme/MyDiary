@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Diary Website">
+    <meta name="keywords" content="Diaries Feelings Thoughts">
+    <meta name="author" author="Solomon Odewale">    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Diary | Profile</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Header and navigation -->
+    <header>
+        <div class = "container">
+            <div id="brand">
+                <h1>My<span class="highlight ">Diary</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="profile.html">Profile</a></li> 
+                    <li><a href="diaries.html">Diaries</a></li>
+                    <li><a href="index.html">Logout</a></li>  
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main section -->
+    <div class="container">
+        <section id ="main">
+            <h1>Welcome User!</h1>
+            <h2>Your latest diary entry is:</h2>
+            <div class="entry">
+                <h3>My Seventh diary entry</h3>
+                <p class="content hide">
+                    Project management refers to directing and allocating available resources so as to be able to
+                    meet requirements of a project within a stipulated time.<span><button>Edit</button></span>
+                </p>
+            </div>   
+        </section>
+        <aside id="sidebar">
+            <form action="">
+                <h3>Track an entry</h3>
+                <input type="search" name="track">
+                <input type="submit">
+
+                <h3>Schedule a diary entry</h3>
+                <input type="date" name="schedule">
+                <input type="submit">
+            </form>             
+        </aside>
+    </div>    
+     
+    <!-- Moadal -->
+    <div id="cover-div" class="hide">
+        <form action="" method="post">
+            <h1>Edit entry</h1>
+
+            <label>Title : </label>  
+            <input type="text" placeholder="New diary"><br><br>
+            
+            <label>Content :</label>  
+            <input type="textarea" placeholder="Enter content here"> <br><br>
+               
+            <button id="reg">Save</button> 
+            <button id="reg">Cancel</button> 
+            </form>                
+        </div>
+
+    <!-- Javascript -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
