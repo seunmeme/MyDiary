@@ -7,12 +7,11 @@
      const h3 = document.querySelectorAll('h3');
 	 const modal = document.getElementById('cover-div');
 	 const edits = document.querySelectorAll('span');
- 
+
  let displayForm = () => {
     signUp.classList.toggle("hide");
     signIn.classList.toggle("hide");
-	}
-	
+	}	
 	
 //Get  all h3 target element 
  	h3.forEach(h3Element => {
