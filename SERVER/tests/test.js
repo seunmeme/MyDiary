@@ -18,7 +18,7 @@ describe('API Endpoints', () => {
   });
   it('should get a specific diary on GET /diaries/:id', (done) => {
     request(app)
-      .get(`/diaries/${diaries[0].id}`)
+      .get(`/diaries/${diaries[2].id}`)
       .end((err, res) => {
         expect(res.status).to.equal(200);
         expect(res).to.be.an('object');
