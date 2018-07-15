@@ -1,15 +1,11 @@
 import chai, { request, expect } from 'chai';
 import chaiHttp from 'chai-http';
 
-import { app } from '../app';
+import app from '../app';
 import diaries from '../models/data';
 
 chai.use(chaiHttp);
 
-// beforeEach((done) => {
-//   diaries
-//   done();
-//   });
 
 describe('API Endpoints', () => {
   it('should list all diaries on GET /diaries', (done) => {
@@ -26,6 +22,7 @@ describe('API Endpoints', () => {
       .get(`/diaries/${diaries[2].id}`)
       .end((err, res) => {
         expect(res.status).to.equal(200);
+        expect(res).to.be.an('object');
         done();
       });
   });
@@ -33,8 +30,8 @@ describe('API Endpoints', () => {
     request(app)
       .post('/api/diaries')
       .send({
-        title: 'bar U Stasi',
-        content: 'Easy to prepare',
+        title: 'New Diary',
+        content: 'This is from test',
       })
       .end((err, res) => {
         expect(res).to.be.an('object');
@@ -42,5 +39,17 @@ describe('API Endpoints', () => {
       });
   });
 
-  it('should modify a specific diary on PUT /diaries/:id');
+  it('should modify a specific diary on PUT /diaries/:id', (done) => {
+    request(app)
+      .put(`/diaries/${diaries[3].id}`)
+      .send({
+        title: 'New Diary',
+        content: 'This is from test',
+      })
+      .end((err, res) => {
+        expect(res.status).to.equal(200);
+        expect(res).to.be.an('object');
+        done();
+      });
+  });
 });
