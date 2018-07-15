@@ -7,7 +7,7 @@ import diaries from '../models/data';
 chai.use(chaiHttp);
 
 // beforeEach((done) => {
-//   retdiaries
+//   diaries
 //   done();
 //   });
 
