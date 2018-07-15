@@ -2,6 +2,8 @@ import express from 'express';
 import logger from 'morgan';
 import bodyParser from 'body-parser';
 
+import Diary from './controller/diaries';
+
 const PORT = 3000;
 const app = express();
 
@@ -15,4 +17,8 @@ app.get('/', (req, res) => res.status(200).send({
   message: 'Welcome to MyDiary API',
 }));
 
+app.get('/diaries', Diary.getDiary);
+
 app.listen(PORT, () => console.log(`Server up and running on port ${PORT}`));
+
+export { app };
