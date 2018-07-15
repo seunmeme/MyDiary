@@ -1,5 +1,5 @@
 import diaries from '../models/data';
- 
+
 class Diary {
   static getDiary(req, res) {
     return res.status(200).json({ diaries });
@@ -7,10 +7,9 @@ class Diary {
 
   static getSpecificDiary(req, res) {
     diaries.forEach((diary) => {
-      if (parseInt(req.params.id, 10) !== diary.id) {
-        throw new Error(`${diary} is not a valid id`);
+      if (diary.id === parseInt(req.params.id, 10)) {
+        return res.status(200).json({ diary });
       }
-      res.status(200).json({ diary });
     });
   }
 
