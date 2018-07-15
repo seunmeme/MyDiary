@@ -6,6 +6,11 @@ import diaries from '../models/data';
 
 chai.use(chaiHttp);
 
+// beforeEach((done) => {
+//   diaries
+//   done();
+//   });
+
 describe('API Endpoints', () => {
   it('should list all diaries on GET /diaries', (done) => {
     request(app)
@@ -21,10 +26,21 @@ describe('API Endpoints', () => {
       .get(`/diaries/${diaries[2].id}`)
       .end((err, res) => {
         expect(res.status).to.equal(200);
+        done();
+      });
+  });
+  it('should add a new diary on POST /diaries', (done) => {
+    request(app)
+      .post('/api/diaries')
+      .send({
+        title: 'bar U Stasi',
+        content: 'Easy to prepare',
+      })
+      .end((err, res) => {
         expect(res).to.be.an('object');
         done();
       });
   });
-  it('should add a new diary on POST /diaries');
+
   it('should modify a specific diary on PUT /diaries/:id');
 });

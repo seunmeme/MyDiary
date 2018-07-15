@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "nodemon --exec babel-node app.js",
-    "test": "mocha tests/**.js --compilers js:babel-core/register --exit"
+    "test": "mocha tests/*.js --compilers js:babel-core/register --exit"
   },
   "git repository": "https://github.com/seunmeme/MyDiary",
   "keywords": [

@@ -12,6 +12,20 @@ class Diary {
       }
     });
   }
+
+  static createDiary(req, res) {
+    diaries.push({
+      id: diaries.length + 1,
+      title: req.body.title,
+      content: req.body.content,
+      createdAt: new Date(),
+    });
+    res.status(200).json({
+      diaries,
+      message: 'success',
+      error: false,
+    });
+  }
 }
 
 export default Diary;
