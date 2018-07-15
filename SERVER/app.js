@@ -17,7 +17,10 @@ app.get('/', (req, res) => res.status(200).send({
   message: 'Welcome to MyDiary API',
 }));
 
+// API routes
 app.get('/diaries', Diary.getDiary);
+app.get('/diaries/:id', Diary.getSpecificDiary);
+app.post('/diaries', Diary.createDiary);
 
 app.listen(PORT, () => console.log(`Server up and running on port ${PORT}`));
 
