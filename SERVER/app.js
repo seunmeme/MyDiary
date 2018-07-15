@@ -18,6 +18,7 @@ app.get('/', (req, res) => res.status(200).send({
 }));
 
 app.get('/diaries', Diary.getDiary);
+app.get('/diaries/:id', Diary.getSpecificDiary);
 
 app.listen(PORT, () => console.log(`Server up and running on port ${PORT}`));
 
