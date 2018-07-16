@@ -18,10 +18,10 @@ app.get('/', (req, res) => res.status(200).send({
 }));
 
 // API routes
-app.get('/diaries', Diary.getDiary);
-app.get('/diaries/:id', Diary.getSpecificDiary);
-app.post('/diaries', Diary.createDiary);
-app.put('/diaries/:id', Diary.updateDiary);
+app.get('/api/v1/diaries', Diary.getDiary);
+app.get('/api/v1/diaries/:id', Diary.getSpecificDiary);
+app.post('/api/v1/diaries', Diary.createDiary);
+app.put('/api/v1/diaries/:id', Diary.updateDiary);
 
 app.listen(PORT, () => console.log(`Server up and running on port ${PORT}`));
 
