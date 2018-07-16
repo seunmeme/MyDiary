@@ -8,8 +8,12 @@ class Diary {
   static getSpecificDiary(req, res) {
     diaries.forEach((diary) => {
       if (diary.id === parseInt(req.params.id, 10)) {
-        return res.status(200).json({ diary });
+        res.status(200).json({ diary });
       }
+    });
+    return res.status(404).json({
+      message: 'diary not found',
+      error: true,
     });
   }
 
@@ -24,6 +28,24 @@ class Diary {
       diaries,
       message: 'success',
       error: false,
+    });
+  }
+
+  static updateDiary(req, res) {
+    diaries.forEach((diary) => {
+      if (diary.id === parseInt(req.params.id, 10)) {
+        diary.title = req.body.title;
+        diary.content = req.body.content;
+        res.status(200).json({
+          diary,
+          message: 'success',
+          error: false,
+        });
+      }
+    });
+    return res.status(404).json({
+      message: 'diary not found',
+      error: true,
     });
   }
 }
