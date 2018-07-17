@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 
 import Diary from './controller/diaries';
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.set('json spaces', 4);
