@@ -1,0 +1,39 @@
+{
+  "name": "mydiary_api",
+  "version": "1.0.0",
+  "description": "API for MY Diary web application",
+  "main": "app.js",
+  "dependencies": {
+    "babel-cli": "~6.26.0",
+    "babel-preset-es2015": "~6.24.1",
+    "body-parser": "~1.18.3",
+    "eslint": "~4.19.1",
+    "eslint-config-airbnb": "~17.0.0",
+    "eslint-plugin-import": "~2.12.0",
+    "eslint-plugin-jsx-a11y": "~6.0.3",
+    "eslint-plugin-react": "~7.9.1",
+    "chai": "~4.1.2",
+    "chai-http": "~4.0.0",
+    "express": "~4.16.3",
+    "morgan": "~1.9.0"
+  },
+  "devDependencies": {
+    "mocha": "~5.2.0",
+    "nodemon": "~1.18.2"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node SERVER/app.js",
+    "test": "mocha SERVER/tests/*.js --compilers js:babel-core/register --exit"
+  },
+  "engines": {
+    "node": "9.3.0"
+  },
+  "git repository": "https://github.com/seunmeme/MyDiary",
+  "keywords": [
+    "Diaries",
+    "Thoughts",
+    "Feelings"
+  ],
+  "author": "Solomon Odewale",
+  "license": "ISC"
+}

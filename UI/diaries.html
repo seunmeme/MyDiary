@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Diary Website">
+    <meta name="keywords" content="Diaries Feelings Thoughts">
+    <meta name="author" author="Solomon Odewale">    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Diary | Diaries</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Header and navigation -->
+    <header>
+        <div class = "container">
+            <div id="brand">
+                <h1>My<span class="highlight ">Diary</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="profile.html">Profile</a></li> 
+                    <li class="active"><a href="diaries.html">Diaries</a></li>
+                    <li><a href="index.html">Logout</a></li>  
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main section -->
+    <div class="container">
+        <section id ="main">
+            <h1>Diary Entries</h1>
+            <h2>Click on an entry to toggle its content</h2>
+            <div class="entry">
+                <h3>My First diary entry</h3>
+                <p class="content">
+                    Project management refers to directing and allocating available resources so as to be able to
+                    meet requirements of a project within a stipulated time.<span><button>Edit</button></span>    
+                </p>
+            </div>
+            <div class="entry">
+                    <h3>My Second diary entry</h3>
+                    <p class="content hide">
+                        Project management refers to directing and allocating available resources so as to be able to
+                        meet requirements of a project within a stipulated time.<span><button>Edit</button></span>
+                    </p>
+            </div>
+            <div class="entry">
+                    <h3>My Third diary entry</h3>
+                    <p class="content hide">
+                        Project management refers to directing and allocating available resources so as to be able to
+                        meet requirements of a project within a stipulated time.<span><button>Edit</button></span>
+                    </p>
+            </div>
+            <div class="entry">
+                    <h3>My Fourth diary entry </h3>
+                    <p class="content hide">
+                        Project management refers to directing and allocating available resources so as to be able to
+                        meet requirements of a project within a stipulated time.<span><button>Edit</button></span>
+                    </p>
+            </div>
+            <div class="entry">
+                    <h3>My Fifth diary entry</h3>
+                    <p class="content hide">
+                        Project management refers to directing and allocating available resources so as to be able to
+                        meet requirements of a project within a stipulated time.<span><button>Edit</button></span>
+                    </p>
+            </div>
+            <div class="entry">
+                    <h3>My Sixth diary entry</h3>
+                    <p class="content hide">
+                        Project management refers to directing and allocating available resources so as to be able to
+                        meet requirements of a project within a stipulated time.<span><button>Edit</button></span>
+                    </p>
+            </div>
+            <div class="entry">
+                    <h3>My Seventh diary entry</h3>
+                    <p class="content hide">
+                        Project management refers to directing and allocating available resources so as to be able to
+                        meet requirements of a project within a stipulated time.<span><button>Edit</button></span>
+                    </p>
+            </div>     
+        </section>
+        <aside id="sidebar">
+            <form action="" method="post">
+                <h1>Add an entry</h1>
+                <label>Title : </label>  
+                <input type="text" placeholder="New diary"><br>
+            
+                <label>Content :</label>  
+                <input type="textarea" placeholder="Enter content here"> <br>
+               
+                <button id="reg">Save</button> 
+            </form>                
+        </aside>
+    </div>
+    <div id="cover-div" class="hide">
+        <form action="" method="post">
+            <h1>Edit entry</h1>
+            <label>Title : </label>  
+            <input type="text" placeholder="New diary"><br><br>
+
+            <label>Content :</label>  
+            <input type="textarea" placeholder="Enter content here"> <br><br>
+   
+            <button id="reg">Save</button> 
+            <button id="reg">Cancel</button> 
+        </form>                
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container"><p> Designed by Solomon Odewale, Copyright &copy; 2018. All rights reserved.</p></div> 
+    </footer>
+    
+    <!-- Javascript -->
+    <script src="./js/script.js"></script>
+
+</body>
+</html>
