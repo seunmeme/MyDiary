@@ -10,7 +10,7 @@ chai.use(chaiHttp);
 describe('API Endpoints', () => {
   it('should list all diaries on GET /diaries', (done) => {
     request(app)
-      .get('/diaries')
+      .get('/api/v1/diaries')
       .end((err, res) => {
         expect(res.status).to.equal(200);
         expect(res).to.be.an('object');
@@ -19,7 +19,7 @@ describe('API Endpoints', () => {
   });
   it('should get a specific diary on GET /diaries/:id', (done) => {
     request(app)
-      .get(`/diaries/${diaries[2].id}`)
+      .get(`/api/v1/diaries/${diaries[2].id}`)
       .end((err, res) => {
         expect(res.status).to.equal(200);
         expect(res).to.be.an('object');
@@ -28,7 +28,7 @@ describe('API Endpoints', () => {
   });
   it('should add a new diary on POST /diaries', (done) => {
     request(app)
-      .post('/api/diaries')
+      .post('/api/v1/api/diaries')
       .send({
         title: 'New Diary',
         content: 'This is from test',
@@ -41,7 +41,7 @@ describe('API Endpoints', () => {
 
   it('should modify a specific diary on PUT /diaries/:id', (done) => {
     request(app)
-      .put(`/diaries/${diaries[3].id}`)
+      .put(`/api/v1/diaries/${diaries[3].id}`)
       .send({
         title: 'New Diary',
         content: 'This is from test',

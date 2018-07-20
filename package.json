@@ -12,18 +12,18 @@
     "eslint-plugin-import": "~2.12.0",
     "eslint-plugin-jsx-a11y": "~6.0.3",
     "eslint-plugin-react": "~7.9.1",
+    "chai": "~4.1.2",
+    "chai-http": "~4.0.0",
     "express": "~4.16.3",
     "morgan": "~1.9.0"
   },
   "devDependencies": {
-    "chai": "~4.1.2",
-    "chai-http": "~4.0.0",
     "mocha": "~5.2.0",
     "nodemon": "~1.18.2"
   },
   "scripts": {
-    "start": "nodemon --exec babel-node app.js",
-    "test": "mocha tests/*.js --compilers js:babel-core/register --exit"
+    "start": "nodemon --exec babel-node SERVER/app.js",
+    "test": "mocha SERVER/tests/*.js --compilers js:babel-core/register --exit"
   },
   "engines": {
     "node": "9.3.0"
