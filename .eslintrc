@@ -1,3 +1,9 @@
 {
-    "extends": "airbnb"
+    "root": true,
+    "extends": "airbnb",
+    "env": {
+        "node": true,
+        "es6": true,
+        "mocha": true      
+      }
 }
