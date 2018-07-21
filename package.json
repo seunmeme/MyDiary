@@ -25,6 +25,9 @@
     "start": "nodemon --exec babel-node SERVER/app.js",
     "test": "mocha SERVER/tests/*.js --compilers js:babel-core/register --exit"
   },
+  "engines": {
+    "node": "9.3.0"
+  },
   "git repository": "https://github.com/seunmeme/MyDiary",
   "keywords": [
     "Diaries",
