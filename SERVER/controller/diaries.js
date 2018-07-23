@@ -18,13 +18,19 @@ class Diary {
   }
 
   static createDiary(req, res) {
+    if (!req.body || !req.body.title || !req.body.content) {
+      return res.status(404).json({
+        message: 'failed',
+        error: 'true',
+      });
+    }
     diaries.push({
       id: diaries.length + 1,
       title: req.body.title,
       content: req.body.content,
       createdAt: new Date(),
     });
-    res.status(200).json({
+    return res.status(200).json({
       diaries,
       message: 'success',
       error: false,
