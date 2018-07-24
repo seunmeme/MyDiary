@@ -22,7 +22,7 @@
     "nodemon": "~1.18.2"
   },
   "scripts": {
-    "start": "node SERVER/app.js",
+    "start": "babel-node SERVER/app.js",
     "start:dev": "nodemon --exec babel-node SERVER/app.js",
     "test": "mocha SERVER/tests/*.js --compilers js:babel-core/register --exit"
   },
