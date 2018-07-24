@@ -116,7 +116,8 @@ h2#query {
 }
 input {
     padding:0 5px;
-    border-radius: 5px
+    border-radius: 5px;
+    min-height: 20px;
 }
  button {
      margin-right: 20px;
@@ -177,20 +178,25 @@ input {
 }
 
 /* Sidebar */
-#sidebar {
+.sidebar {
     float: right;
     width: 33%;
-    margin-top: 75px;
+    margin-top: 50px;
     color: #fff;
     background: #35424a;
     border-radius: 15px;
     padding: 20px 0;
+    padding-left: 30px;
+}
+.sidebar p {
+    font-size: 1.3em;
+    font-weight: bold
 }
 form {
     padding: 0 15px;
     margin: 0;
 }
-#sidebar input[type="text"] {
+.sidebar input[type="text"] {
    margin:  10px 25px;
    width: 68%;
 }
@@ -198,7 +204,7 @@ input[type="textarea"] {
     height: 50px;
     width: 68%;
 }
-#sidebar button {
+.sidebar button {
     color:  white;
     background: teal;
     border: none;
@@ -209,10 +215,16 @@ input[type="textarea"] {
     margin-top: 40px;
  }
  input[type="submit"] {
-    border: none;
+    border: none;   
 }
-input[type="date"] {
-    width: 50%
+input[type="submit"]#schedule {
+    margin: 0 40px;
+}
+input[type="date"], [type="search"] {
+    width: 70%
+}
+aside {
+    margin: auto
 }
 
  /* Modal */
