@@ -19,7 +19,8 @@ h3.forEach((h3Element) => {
 });
 
 if (cancel) {
-  cancel.addEventListener('click', () => {
+  cancel.addEventListener('click', (e) => {
+	e.preventDefault();
     modal.classList.toggle('hide');
   });
 }
