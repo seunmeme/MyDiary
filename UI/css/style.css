@@ -56,7 +56,7 @@ header a:hover{
 
 /* Showcase */
 #showcase {
-    min-height: 400px;
+    min-height: 520px;
     background: url("../images/diary1.jpg") no-repeat 0 -50px;
     text-align: center;
     color: #35424a   
@@ -69,14 +69,32 @@ header a:hover{
 #showcase p {
     font-size: 18px;
 }
+#showcase button {
+    height: 35px;
+    width: 30%;
+    font-size: 20px;
+    background: #e8491d;
+    color: #fff;
+}
 
 /* Forms */
 #form {
     padding:15px;
+    width: 94%;
     padding-bottom: 25px; 
     color: #fff;
     background: #35424a;
     
+}
+#form input {
+    width: 80%; 
+    margin: 0 30px;
+    line-height: 1.5em;    
+}
+#form button {
+    width: 70%; 
+    margin: 0 30px;
+    line-height: 2em;    
 }
 h2#query {
     text-align: center
@@ -88,8 +106,7 @@ h2#query {
     font-weight: bold
 }
 .fields {
-    float: left;
-    width: 60%;
+    width: 100%;
     margin-bottom: 30px
 }
 .fields button{
@@ -101,17 +118,15 @@ h2#query {
 .reg {
     line-height: 2.2em;
     margin: auto; 
-    width: 60%;
+    width: 70%;
 }
 .reg input {
-    width: 60%; 
-    float: right;
+    width: 80%; 
     margin: 0 30px;
     line-height: 1.5em;
 }
 .query {
-    float: right;
-    width: 40%;
+    width: 100%;
     padding-top: 30px
 }
 input {
@@ -228,22 +243,48 @@ aside {
 }
 
  /* Modal */
- #cover-div {
+ .modal {
     position: fixed;
-    top: 100px;
-    left: 50px;
+    left: 0;
+    top: 0;
+    width: 190%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+#close-button {
+    float: right;
+    width: 1.8rem;
+    line-height: 1.8rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+#close-button:hover {
+    background-color: darkgray;
+}
+#cover-div {
+    position: fixed;
+    top: 80px;
+    left: 30%;
     z-index: 9000;
     margin: auto;
     margin-top: 40px;
     padding-top: 15px;
-    width: 60%;
+    width: 40%;
     height: 60%;
     text-align: center;
     color: #fff;
     background-color: gray;
-    opacity: 0.8;
+    opacity: 0.9;
     border-radius: 15px;
   }
+
 /* Footer */
 footer {
     background-color: #35424a;
@@ -267,7 +308,7 @@ footer {
     #showcase h1 {
         margin-top: 80px
     }
-    #form .fields button, #sidebar, #sidebar button, #reg, #login, .buttons span {
+    #form .fields button, #sidebar, #showcase button, #sidebar button, #reg, #login, .buttons span {
         display: block;
         width: 80%;
         margin: auto;
