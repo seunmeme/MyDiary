@@ -13,7 +13,8 @@ const edits = document.querySelectorAll('span button');
 const toggleModal= () => {
 	modal.classList.toggle('hide');
     }
-const toggleModalClass = () => {
+const toggleModalClass = (e) => {
+  e.preventDefault();
   modalClass.classList.toggle('hide');
     }
 const displayForm = (e) => {
