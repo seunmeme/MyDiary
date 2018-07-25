@@ -13,7 +13,10 @@ const edits = document.querySelectorAll('span button');
 const toggleModal= () => {
 	modal.classList.toggle('hide');
     }
-
+const toggleModalClass = (e) => {
+  e.preventDefault();
+  modalClass.classList.toggle('hide');
+    }
 const displayForm = (e) => {
     e.preventDefault();
 	signIn.classList.toggle('hide');
@@ -34,10 +37,7 @@ h3.forEach((h3Element) => {
 });
 
 if (cancel) {
-  cancel.addEventListener('click', (e) => {
-	e.preventDefault();
-    modal.classList.toggle('hide');
-  });
+  cancel.addEventListener('click', toggleModalClass);
 }
 
 if (register) {
@@ -49,9 +49,7 @@ if (login) {
 }
 
 edits.forEach((edit) => {
-  edit.addEventListener('click', () => {
-    modalClass.classList.toggle('hide');
-      })
+  edit.addEventListener('click', toggleModalClass)
 });
 
 
