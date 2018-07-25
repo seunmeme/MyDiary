@@ -1,4 +1,4 @@
-const modalclass = document.getElementById('modal');
+const modalClass = document.getElementById('modal');
 const trigger = document.getElementById('trigger');
 const closeButton = document.getElementById('close-button');
 const login = document.getElementById('login');
@@ -49,7 +49,9 @@ if (login) {
 }
 
 edits.forEach((edit) => {
-  edit.addEventListener('click', toggleModal)
+  edit.addEventListener('click', () => {
+    modalClass.classList.toggle('hide');
+      })
 });
 
 
