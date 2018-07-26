@@ -18,13 +18,13 @@ VALUES ('SOlomon Odewale','seunmeme','seunmeme@gmail.com','${hashedPassword}');`
 
 
 const entries = `
-DROP TABLE IF EXISTS diaryEntries CASCADE;
-CREATE TABLE diaryEntries(
+DROP TABLE IF EXISTS entries CASCADE;
+CREATE TABLE entries(
   id SERIAL PRIMARY KEY,
   title VARCHAR(80) NOT NULL,
-  content VARCHAR(255) NOT NULL,
+  content TEXT NOT NULL,
   createdAt TIMESTAMPTZ NOT NULL DEFAULT NOW());
-INSERT INTO diaryEntries(
+INSERT INTO entries(
   title,
   content)
 VALUES ('My first entry', 'This is the content of my first entry'),
