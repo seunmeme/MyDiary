@@ -4,7 +4,7 @@
 A simple web application that allows users to pen down their thoughts and feelings.
 
 ## Links
-[Heroku](https://guarded-bayou-47576.herokuapp.com)
+[Heroku](https://guarded-bayou-47576.herokuapp.com/api/v1)
 [Home page](https://seunmeme.github.io/MyDiary/UI/index.html)
 
 ## API Endpoints
