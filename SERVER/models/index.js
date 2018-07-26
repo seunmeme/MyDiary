@@ -15,6 +15,9 @@ const client = new Client(config);
 
 client.connect();
 client.query(queries, (error) => {
-  console.log('error', error.message);
+  if (error) {
+    console.log('error', error.message);
+  }
+
   client.end();
 });
