@@ -8,7 +8,7 @@ dotenv.config();
 let config;
 
 if (process.env.NODE_ENV === 'development' || 'test') {
-  config = configuration.development;
+  config = configuration.development.database;
 } else { config = process.env.DATABASE_URL; }
 
 const client = new Client(config);

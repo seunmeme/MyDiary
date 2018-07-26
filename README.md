@@ -9,11 +9,11 @@ A simple web application that allows users to pen down their thoughts and feelin
 
 ## API Endpoints
 | HTTP VERB     | ENDPOINT            | FUNCTIONALITY                  |
-| ------------- |:-------------------:| ------------------------------:|
+| ------------- |-------------------| ------------------------------|
 | GET           | api/v1/diaries      | Get all diary entries          |
-| GET           | api/v1/entries/:id  | Get a specific diary entry     |
-| POST          | api/v1/entries      | Create a new diary entry       |
-| PUT           | api/v1/entries/:id  | Update an existing diary entry |
+| GET           | api/v1/diaries/:id  | Get a specific diary entry     |
+| POST          | api/v1/diaries      | Create a new diary entry       |
+| PUT           | api/v1/diaries/:id  | Update an existing diary entry |
 
 ## Author
 Solomon Odewale
