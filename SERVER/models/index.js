@@ -21,3 +21,5 @@ client.query(queries, (error) => {
 
   client.end();
 });
+
+export default client;
