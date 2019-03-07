@@ -1,10 +1,12 @@
 import express from 'express';
 import logger from 'morgan';
 import bodyParser from 'body-parser';
+import dotenv from 'dotenv';
 
 import router from './routes/route';
 
-const PORT = process.env.PORT || 5000;
+dotenv.config();
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.set('json spaces', 4);

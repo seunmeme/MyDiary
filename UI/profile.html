@@ -31,6 +31,7 @@
     <div class="container">
         <section id ="main">
             <h1>Welcome User!</h1>
+            <h2>Your currently have 7 diary entries.</h2>
             <h2>Your latest diary entry is:</h2>
             <div class="entry">
                 <h3>My Seventh diary entry</h3>
@@ -40,13 +41,24 @@
                 </p>
             </div>   
         </section>
-        <aside id="sidebar">
+        <aside class="sidebar">
             <form action="">
-                <h3>Track an entry</h3>
+                <p>Reminder</p>
+                <label>Title</label> 
+                <input type="search" placeholder="Title">
+                <br/><br/>
+                <label>Date</label> 
+                <input type="date" name="schedule"><br/><br/>
+                <input id= "schedule" type="submit">
+            </form>             
+        </aside>
+        <aside class="sidebar">
+            <form action="">
+                <p>Track an entry</p>
                 <input type="search" name="track">
                 <input type="submit">
 
-                <h3>Schedule a diary entry</h3>
+                <p>Schedule a diary entry</p>
                 <input type="date" name="schedule">
                 <input type="submit">
             </form>             
@@ -65,7 +77,7 @@
             <input type="textarea" placeholder="Enter content here"> <br><br>
                
             <button id="reg">Save</button> 
-            <button id="reg">Cancel</button> 
+            <button id="cancel">Cancel</button> 
             </form>                
         </div>
 
